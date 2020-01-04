@@ -48,7 +48,7 @@
     <nav>
       <ul>
         <router-link class="previous" to="/">&laquo; Acasa</router-link>
-        <router-link class="next" to="/page3accesorii">Accesorii &raquo;</router-link>
+        <router-link class="next" to="/page25croitorii">Croitorii &raquo;</router-link>
       </ul>
     </nav>
 

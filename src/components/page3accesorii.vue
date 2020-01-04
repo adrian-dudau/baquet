@@ -5,7 +5,7 @@
 
     <nav>
       <ul>
-        <router-link class="previous" to="/page2imbracaminte">&lt; Imbracaminte</router-link>
+        <router-link class="previous" to="/page25croitorii">&lt; Croitorii</router-link>
         <router-link class="next" to="/page4saloane">Saloane &gt;</router-link>
       </ul>
     </nav>

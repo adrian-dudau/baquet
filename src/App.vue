@@ -14,6 +14,7 @@
 
 <script>
 import page2imbracaminte from './components/page2imbracaminte.vue'
+import page25croitorii from './components/page25croitorii.vue'
 import page3accesorii from './components/page3accesorii.vue'
 import page4saloane from './components/page4saloane.vue'
 import page5calendar from './components/page5calendar.vue'
@@ -22,6 +23,7 @@ export default {
   name: 'App',
   components: {
     'app-page2imbracaminte': page2imbracaminte,
+    'app-page25croitorii': page25croitorii,
     'app-page3accesorii': page3accesorii,
     'app-page4saloane': page4saloane,
     'app-page5calendar': page5calendar
