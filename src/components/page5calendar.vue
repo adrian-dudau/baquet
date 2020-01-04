@@ -1,7 +1,7 @@
 <template>
 
   <div class="container">
-    <h1>Cart (5)</h1>
+    <h1>Calendar (5)</h1>
     <nav>
         <ul>
             <li><router-link to="/page4saloane">&lt; Saloane</router-link></li>

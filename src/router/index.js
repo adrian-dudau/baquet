@@ -4,7 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import page2imbracaminte from '@/components/page2imbracaminte'
 import page3accesorii from '@/components/page3accesorii'
 import page4saloane from '@/components/page4saloane'
-import page5cart from '@/components/page5cart'
+import page5calendar from '@/components/page5calendar'
 
 Vue.use(Router)
 
@@ -31,9 +31,9 @@ export default new Router({
       component: page4saloane
     },
     {
-      path: '/page5cart',
-      name: 'page5cart',
-      component: page5cart
+      path: '/page5calendar',
+      name: 'page5calendar',
+      component: page5calendar
     }
   ]
 })
