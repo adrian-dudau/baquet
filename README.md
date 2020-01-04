@@ -14,6 +14,12 @@ npm run dev
 # build for production with minification
 npm run build
 
+# push to firebase
+firebase deploy
+# (for init)
+firebase login
+firebase init
+
 # build for production and view the bundle analyzer report
 npm run build --report
 
