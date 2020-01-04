@@ -4,8 +4,8 @@
     <h1>Accesorii (3)</h1>
     <nav>
         <ul>
-            <li><router-link to="/page2imbracaminte">&lt; Imbracaminte</router-link></li>
-            <li><router-link to="/page4saloane">Saloane &gt;</router-link></li>
+            <router-link class="previous" to="/page2imbracaminte">&lt; Imbracaminte</router-link>
+            <router-link class="next" to="/page4saloane">Saloane &gt;</router-link>
         </ul>
     </nav>
   </div>

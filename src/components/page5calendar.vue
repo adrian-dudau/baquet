@@ -4,8 +4,8 @@
     <h1>Calendar (5)</h1>
     <nav>
         <ul>
-            <li><router-link to="/page4saloane">&lt; Saloane</router-link></li>
-            <li><router-link to="/">Finish</router-link></li>
+            <router-link class="previous" to="/page4saloane">&lt; Saloane</router-link>
+            <router-link class="next" to="/">Finish</router-link>
         </ul>
     </nav>
   </div>

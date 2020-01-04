@@ -2,10 +2,14 @@
 
   <div class="container">
     <h1>Imbracaminte (2)</h1>
+
+    <nav>
+    </nav>
+
     <nav>
         <ul>
-            <li><router-link to="/">&laquo; Acasa</router-link></li>
-            <li><router-link to="/page3accesorii">Accesorii &raquo;</router-link></li>
+            <router-link class="previous" to="/">&laquo; Acasa</router-link>
+            <router-link class="next" to="/page3accesorii">Accesorii &raquo;</router-link>
         </ul>
     </nav>
   </div>
