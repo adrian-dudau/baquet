@@ -1,4 +1,3 @@
-<!-- aici e styleul pentru butoane, schimbare aici si apare pe toate paginile -->
 <style>
     a {
       text-decoration: none;
