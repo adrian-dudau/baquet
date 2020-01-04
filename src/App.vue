@@ -1,3 +1,9 @@
+<!-- <style>
+  body {
+    background-color: red
+  }
+</style>> -->
+
 <template>
   <div id="app">
         <img src="../resources/page_1/bkg_1.png" width="500">
