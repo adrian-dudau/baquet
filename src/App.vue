@@ -16,12 +16,12 @@
         >
           <v-list-item two-line>
             <v-list-item-avatar>
-              <img src="https://randomuser.me/api/portraits/men/81.jpg">
+              <img src="https://randomuser.me/api/portraits/women/31.jpg">
             </v-list-item-avatar>
 
             <v-list-item-content>
               <v-list-item-title>Bunquet</v-list-item-title>
-              <v-list-item-subtitle>User</v-list-item-subtitle>
+              <v-list-item-subtitle>Ana</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
 
@@ -60,7 +60,7 @@ export default {
         { title: 'Croitorii', route: '/page25croitorii', icon: 'mdi-help-box' },
         { title: 'Accesori', route: '/page3accesorii', icon: 'mdi-image' },
         { title: 'Saloane', route: '/page4saloane', icon: 'mdi-help-box' },
-        { title: 'Calendar', route: '/page5calendar', icon: 'mdi-help-box' }
+        { title: 'Coafuri si Make-up', route: '/page5calendar', icon: 'mdi-help-box' }
       ]
     }
   }

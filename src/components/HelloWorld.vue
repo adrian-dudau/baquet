@@ -28,9 +28,9 @@
 
 <template>
 
-  <div class="container">
-    <h1>Home </h1>
-    <img src="../../resources/page_1/bkg_1.png" width="500">
-  </div>
+  <v-container fluid>
+    <img src="../../resources/page_1/bkg_1.png" width=25%>
+    <h1>Acasa </h1>
+  </v-container >
 
 </template>

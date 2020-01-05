@@ -1,72 +1,212 @@
+
 <template>
 
-  <div class="container">
-    <h1>Accesorii Adecvate</h1>
+  <v-container fluid>
+    <img src="../../resources/page_1/bkg_1.png" width=25%>
+    <h1>Sugestii Accesorii</h1>
 
-    <div class="row">
+      <v-container fluid
+         v-for="category in categories"
+          :key="category.id">
 
-      <div class="column">
-        <div class="card">
-          <img src="https://static.zara.net/photos///2020/V/0/2/p/7347/392/800/2/w/913/7347392800_1_1_1.jpg?ts=1577980951635" alt="Papion cu structura de otomana" style="width:100%">
-          <h1>Papion cu structura de otomana</h1>
-          <p class="price">59,90 lei</p>
-          <p>Papion confecționat din mătase cu structură orizontală. Închidere ajustabilă cu cârlig metalic.</p>
-          <p><button onclick="window.location.href = 'https://www.zara.com/ro/ro/papion-cu-structur%C4%83-de-otoman%C4%83-p07347492.html?v1=34141750&v2=1458207';">Cumpara</button></p>
-        </div>
-      </div>
+        <h2>{{category.title}}</h2>
 
-      <div class="column">
-        <div class="card">
-          <img src="https://static.zara.net/photos///2020/V/1/2/p/2400/520/040/2/w/913/2400520040_1_1_1.jpg?ts=1575373472412" alt="Pantofi Eleganti" style="width:100%">
-          <h1>Pantofi Eleganti</h1>
-          <p class="price">229,90 lei</p>
-          <p>Pantofi tip Oxford. Față cu câte cinci orificii pentru șireturi. Calapod cu vârf ascuțit. Cusături decorative. Stil clasic.</p>
-          <p><button onclick="window.location.href = 'https://www.zara.com/ro/ro/pantofi-elegan%C5%A3i-p12400520.html?v1=34107246&v2=1458207';">Cumpara</button></p>
-        </div>
-      </div>
+        <v-row dense>
+        <v-col
+          v-for="card in category.cards"
+          :key="card.id"
+          :cols=4
+        >
+          <v-card height="100%">
+            <v-img
+              :src="card.img"
+              class="white--text align-end"
+              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+              height="200px"
+            >
+              <v-card-title v-text="card.title"></v-card-title>
+            </v-img>
 
-      <div class="column">
-        <div class="card">
-          <img src="https://res.cloudinary.com/trendhim/image/upload/f_auto,c_pad,q_auto,w_90,h_90/media/catalog/product/8/-/8-2_132.jpg" alt="Ceas de buzunar camuflat negru" style="width:100%">
-          <h1>Ceas de buzunar camuflat negru</h1>
-          <p class="price">249,00 lei</p>
-          <p>Ceas de buzunar camuflat negru</p>
-          <p><button onclick="window.location.href = 'https://www.trendhim.ro/ceas-de-buzunar-camuflat-negru-p.html';">Cumpara</button></p>
-        </div>
-      </div>
+            <v-card-text>
+              {{card.description}}
+            </v-card-text>
 
-      <div class="column">
-        <div class="card">
-          <img src="https://cdn5.gomag.ro/domains/gepas-mag.ro/files/product/large/pantofi-dama-nike-invest-329-ngnl-piele-naturala-peliculizata-7858-9828.jpg" alt="Pantofi dama" style="width:100%">
-          <h1>Pantofi dama Nike Invest 329-NGNL</h1>
-          <p class="price">449,99 lei</p>
-          <p>Pantofi dama Nike Invest 329-NGNL, piele naturala peliculizata</p>
-          <p><button onclick="window.location.href = 'https://www.gepas-mag.ro/pantofi-dama/pantofi-dama-329-ninl-7874.html';">Cumpara</button></p>
-        </div>
-      </div>
+            <v-row dense>
+              <v-col></v-col>
+              <v-col class="align-center">
+                <v-icon color="green" >mdi-cash</v-icon>
+                {{card.price}}
+              </v-col>
+              <v-col></v-col>
+            </v-row>
+            <v-row dense>
+              <v-col class="align-end">
+              <v-card-actions>
 
-      <div class="column">
-        <div class="card">
-          <img src="https://www.peloro.ro/4401-small_default/geanta-blackstar.jpg" style="width:100%">
-          <h1>Geanta Blackstar</h1>
-          <p class="price">159,00 lei</p>
-          <p>Geanta Blackstar</p>
-          <p><button onclick="window.location.href = 'https://www.peloro.ro/home/730-geanta-blackstar.html';">Cumpara</button></p>
-        </div>
-      </div>
+                <v-spacer></v-spacer>
 
-      <div class="column">
-        <div class="card">
-          <img src="https://pursehuit.ro/wp-content/uploads/2015/08/Colier-Sophia-b.jpg" alt="Colier Sophia" style="width:100%">
-          <h1>Colier Sophia</h1>
-          <p class="price">29,60 lei</p>
-          <p>Colier Sophia</p>
-          <p><button onclick="window.location.href = 'https://pursehuit.ro/produs/colier-sophia/';">Cumpara</button></p>
-        </div>
-      </div>
+                <v-btn
+                  text
+                  dark
+                  color="deep-purple accent-4"
+                  :href="card.link"
+                >
+                  Comanda
+                </v-btn>
 
-    </div>
+                <v-btn dark icon @click="card.clicked = !card.clicked">
+                  <v-icon v-if="card.clicked" color="red" >mdi-heart</v-icon>
+                  <v-icon v-if="!card.clicked" color="grey">mdi-heart</v-icon>
+                </v-btn>
 
-  </div>
+              </v-card-actions>
+              </v-col>
+            </v-row>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-container>
 
 </template>
+
+<script>
+export default {
+  data: () => ({
+    categories: [
+      {
+        id: 1,
+        title: 'Accesorii Fete',
+        cards: [
+          {
+            id: 1,
+            clicked: false,
+            title: 'Sacou slim fit cu aspect texturat Basilia',
+            description: '',
+            price: '449,99',
+            link: 'https://www.fashiondays.ro/p/sacou-slim-fit-cu-aspect-texturat-brasilia-barbati-mango-p2431886-2/',
+            img: 'https://fdcdn.akamaized.net/m/780x1132/products/27602/27601484/images/res_9bbd83b3a69263b8b4b0770af819ad8b.jpg?s=v6Bz2dTO5UbJ'
+          },
+          {
+            id: 2,
+            title: 'Rochie Ginette',
+            clicked: true,
+            description: 'Rochie Ginette neagra cu paiete aplicate pe tull',
+            link: 'https://www.dyfashion.ro/rochii/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull.html',
+            price: '692,99',
+            img: 'https://cdn10.avanticart.ro/dyfashion.ro/pictures/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull-467743-0.jpeg'
+          },
+          {
+            id: 3,
+            title: 'Rochie Ginette',
+            clicked: true,
+            description: 'Rochie Ginette neagra cu paiete aplicate pe tull',
+            link: 'https://www.dyfashion.ro/rochii/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull.html',
+            price: '692,99',
+            img: 'https://cdn10.avanticart.ro/dyfashion.ro/pictures/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull-467743-0.jpeg'
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: 'Accesorii Baieti',
+        cards: [
+          {
+            id: 1,
+            clicked: false,
+            title: 'Sacou slim fit cu aspect texturat Basilia',
+            description: '',
+            price: '449,99',
+            link: 'https://www.fashiondays.ro/p/sacou-slim-fit-cu-aspect-texturat-brasilia-barbati-mango-p2431886-2/',
+            img: 'https://fdcdn.akamaized.net/m/780x1132/products/27602/27601484/images/res_9bbd83b3a69263b8b4b0770af819ad8b.jpg?s=v6Bz2dTO5UbJ'
+          },
+          {
+            id: 2,
+            title: 'Rochie Ginette',
+            clicked: true,
+            description: 'Rochie Ginette neagra cu paiete aplicate pe tull',
+            link: 'https://www.dyfashion.ro/rochii/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull.html',
+            price: '692,99',
+            img: 'https://cdn10.avanticart.ro/dyfashion.ro/pictures/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull-467743-0.jpeg'
+          },
+          {
+            id: 3,
+            title: 'Rochie Ginette',
+            clicked: true,
+            description: 'Rochie Ginette neagra cu paiete aplicate pe tull',
+            link: 'https://www.dyfashion.ro/rochii/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull.html',
+            price: '692,99',
+            img: 'https://cdn10.avanticart.ro/dyfashion.ro/pictures/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull-467743-0.jpeg'
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: 'Pantofi Fete',
+        cards: [
+          {
+            id: 1,
+            clicked: false,
+            title: 'Sacou slim fit cu aspect texturat Basilia',
+            description: '',
+            price: '449,99',
+            link: 'https://www.fashiondays.ro/p/sacou-slim-fit-cu-aspect-texturat-brasilia-barbati-mango-p2431886-2/',
+            img: 'https://fdcdn.akamaized.net/m/780x1132/products/27602/27601484/images/res_9bbd83b3a69263b8b4b0770af819ad8b.jpg?s=v6Bz2dTO5UbJ'
+          },
+          {
+            id: 2,
+            title: 'Rochie Ginette',
+            clicked: true,
+            description: 'Rochie Ginette neagra cu paiete aplicate pe tull',
+            link: 'https://www.dyfashion.ro/rochii/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull.html',
+            price: '692,99',
+            img: 'https://cdn10.avanticart.ro/dyfashion.ro/pictures/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull-467743-0.jpeg'
+          },
+          {
+            id: 3,
+            title: 'Rochie Ginette',
+            clicked: true,
+            description: 'Rochie Ginette neagra cu paiete aplicate pe tull',
+            link: 'https://www.dyfashion.ro/rochii/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull.html',
+            price: '692,99',
+            img: 'https://cdn10.avanticart.ro/dyfashion.ro/pictures/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull-467743-0.jpeg'
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: 'Pantofi Baieti',
+        cards: [
+          {
+            id: 1,
+            clicked: false,
+            title: 'Sacou slim fit cu aspect texturat Basilia',
+            description: '',
+            price: '449,99',
+            link: 'https://www.fashiondays.ro/p/sacou-slim-fit-cu-aspect-texturat-brasilia-barbati-mango-p2431886-2/',
+            img: 'https://fdcdn.akamaized.net/m/780x1132/products/27602/27601484/images/res_9bbd83b3a69263b8b4b0770af819ad8b.jpg?s=v6Bz2dTO5UbJ'
+          },
+          {
+            id: 2,
+            title: 'Rochie Ginette',
+            clicked: true,
+            description: 'Rochie Ginette neagra cu paiete aplicate pe tull',
+            link: 'https://www.dyfashion.ro/rochii/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull.html',
+            price: '692,99',
+            img: 'https://cdn10.avanticart.ro/dyfashion.ro/pictures/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull-467743-0.jpeg'
+          },
+          {
+            id: 3,
+            title: 'Rochie Ginette',
+            clicked: true,
+            description: 'Rochie Ginette neagra cu paiete aplicate pe tull',
+            link: 'https://www.dyfashion.ro/rochii/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull.html',
+            price: '692,99',
+            img: 'https://cdn10.avanticart.ro/dyfashion.ro/pictures/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull-467743-0.jpeg'
+          }
+        ]
+      }
+    ]
+  })
+}
+</script>

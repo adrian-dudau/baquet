@@ -1,6 +1,7 @@
 <template>
 
   <div>
+    <img src="../../resources/page_1/bkg_1.png" width=25%>
     <h1>Saloane </h1>
 
     <v-container fluid>
