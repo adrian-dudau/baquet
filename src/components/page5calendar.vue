@@ -2,7 +2,7 @@
 
   <v-container fluid>
     <img src="../../resources/page_1/bkg_1.png" width=25%>
-    <h1> Coafuri si Make-up </h1>
+    <h1> Coafuri si Machiaj </h1>
 
     <v-container fluid
          v-for="category in categories"
@@ -54,21 +54,63 @@ export default {
         cards: [
           {
             id: 1,
-            clicked: false,
-            title: 'Sacou slim fit cu aspect texturat Basilia',
-            img: 'https://fdcdn.akamaized.net/m/780x1132/products/27602/27601484/images/res_9bbd83b3a69263b8b4b0770af819ad8b.jpg?s=v6Bz2dTO5UbJ'
+            clicked: true,
+            title: 'Coafura par lung cu impletitura',
+            img: 'https://img.digitalag.ro/?u=https%3A%2F%2Fa1.ro%2Fuploads%2Fmodules%2Fnews%2F0%2F2019%2F5%2F15%2F866603%2F1557912366b03ce848.jpg'
           },
           {
             id: 2,
-            title: 'Rochie Ginette',
-            clicked: true,
-            img: 'https://cdn10.avanticart.ro/dyfashion.ro/pictures/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull-467743-0.jpeg'
+            clicked: false,
+            title: 'Coc elegant lejer',
+            img: 'http://www.imbracamintedama.com/wp-content/uploads/2016/08/coafuri-par-lung10.jpg'
           },
           {
             id: 3,
-            title: 'Rochie Ginette',
             clicked: true,
-            img: 'https://cdn10.avanticart.ro/dyfashion.ro/pictures/rochie-ginette-neagra-cu-paiete-aplicate-pe-tull-467743-0.jpeg'
+            title: 'Coc impletit',
+            img: 'https://suntfericita.manager.ro/dbimg/images/braid_final.jpg'
+          },
+          {
+            id: 4,
+            clicked: false,
+            title: 'Par prins cu impletitura',
+            img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSJmVjw9YrN3zrfbrvHgrQ6ET-1i9FqJBBz2Kfv2z95f4KCb1Qa'
+          },
+          {
+            id: 5,
+            clicked: true,
+            title: 'Bucle par scurt',
+            img: 'https://i.pinimg.com/originals/95/e7/db/95e7db331ec533d4af1ad3ba047784d9.jpg'
+          },
+          {
+            id: 6,
+            clicked: true,
+            title: 'Coafura greceasca',
+            img: 'http://www.hotelalgiardinetto.it/wp-content/uploads/2019/06/grecheskaya-pricheska-na-srednie-volosi-kak-sdelat-poshagovo-s-foto.jpg'
+          }
+        ]
+      },
+      {
+        id: 1,
+        title: 'Machiaj',
+        cards: [
+          {
+            id: 1,
+            clicked: true,
+            title: 'Machiaj de seara cu negru si alb',
+            img: 'https://i2.wp.com/www.ticataca.ro/wp-content/uploads/2018/03/e9132b117a0433e8c56f9b84accb66ee.jpg?fit=564%2C564&ssl=1'
+          },
+          {
+            id: 2,
+            clicked: true,
+            title: 'Machiaj pentru ochi caprui',
+            img: 'https://i.pinimg.com/736x/5f/46/0f/5f460f29a27d83de28f6c2239c8bbcd1--makeup-tutorials-makeup-ideas.jpg'
+          },
+          {
+            id: 3,
+            clicked: true,
+            title: 'Machiaj ochi albastri',
+            img: 'https://perfectimperfecte.ro/wp-content/uploads/2016/11/ochialbastri.jpg'
           }
         ]
       }

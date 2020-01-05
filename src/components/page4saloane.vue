@@ -8,7 +8,7 @@
       <v-row dense>
         <v-col
           v-for="salon in salons"
-          :key="salon.id.title"
+          :key="salon.id"
           :cols=6
         >
           <v-card
@@ -105,7 +105,7 @@
         <v-row justify="center">
             <v-dialog v-model="dialog" persistent max-width="600px">
             <template v-slot:activator="{ on }">
-              <v-btn color="primary" dark v-on="on">Programari</v-btn>
+              <v-btn color="primary" v-on="on">Programari</v-btn>
             </template>
             <v-card>
               <v-card-title>
@@ -129,6 +129,7 @@
                    <v-col cols="12" sm="6" md="4">
                     <v-menu
                       v-model="menu2"
+                      :close-on-click="false"
                       :close-on-content-click="false"
                       :nudge-right="40"
                       transition="scale-transition"
@@ -141,12 +142,13 @@
                           v-on="on"
                         ></v-text-field>
                       </template>
-                      <v-date-picker v-model="date" @input="menu2 = false"></v-date-picker>
+                      <v-date-picker v-model="date" @input="menu2 = false" :allowed-dates="allowedDates"></v-date-picker>
                       </v-menu>
                     </v-col>
                     <v-col cols="12" sm="6" md="4">
                     <v-menu
                       v-model="menu1"
+                      :close-on-click="false"
                       :close-on-content-click="false"
                       :nudge-right="40"
                       transition="scale-transition"
@@ -159,7 +161,10 @@
                           v-on="on"
                         ></v-text-field>
                       </template>
-                      <v-time-picker v-model="time" @input="menu1 = false"></v-time-picker>
+                      <v-time-picker
+                        :allowed-hours="allowedHours"
+                        :allowed-minutes="allowedMinutes"
+                        v-model="time" @input="menu1 = false"></v-time-picker>
                       </v-menu>
                     </v-col>
                     <v-col cols="12" sm="4">
@@ -203,9 +208,8 @@ export default {
       {
         id: 1,
         name: 'Chic Salon',
-        image: '../../resources/page_1/bkg_1.png',
         subtitle: 'Chic Salon – Ingrijire completa intr-un singur loc!',
-        description: 'De peste 10 ani in domeniul infrumusetarii centrele Chic Salon by BeautyOne ofera o gama larga de servicii, fiind insa specializate in remodelarea corporala, estetica faciala avansata si epilare definitiva.',
+        description: 'De peste 10 ani in domeniul infrumusetarii centrele Chic Salon ofera o gama larga de servicii',
         rating: '4.9',
         reviews: '3',
         text_reviews: [
@@ -399,28 +403,27 @@ export default {
         ]
       },
       {
-        id: 1,
-        name: 'Chic Salon',
-        image: '../../resources/page_1/bkg_1.png',
-        subtitle: 'Chic Salon – Ingrijire completa intr-un singur loc!',
-        description: 'De peste 10 ani in domeniul infrumusetarii centrele Chic Salon by BeautyOne ofera o gama larga de servicii, fiind insa specializate in remodelarea corporala, estetica faciala avansata si epilare definitiva.',
-        rating: '4.9',
+        id: 2,
+        name: 'Barber Deluxe',
+        subtitle: 'Barber Deluxe – Locul de rasfat al barbatilor!',
+        description: 'Barbatii au nevoi specifice pe care trebuie sa le acopere in dorinta lor de dezvoltare continua.',
+        rating: '5',
         reviews: '3',
         text_reviews: [
           {
             id: 1,
-            img: 'https://chicsalon.ro/wp-content/uploads/2017/03/Chic-Salon-Izvor-4.jpg',
-            txt: 'Servicii profesionale; Personal amabil'
+            img: 'https://barber-deluxe.ro/wp-content/gallery/galerie/IMG_E1197.JPG',
+            txt: 'Servicii profesionale si preturi acceptabile'
           },
           {
             id: 2,
-            img: 'https://chicsalon.ro/wp-content/uploads/2017/03/Chic-Salon-Izvor-7.jpg',
-            txt: 'Personal excelent; Foarte cumunicativ si mereu cu sugesti bune'
+            img: 'https://barber-deluxe.ro/wp-content/gallery/galerie/MG_8085.jpg',
+            txt: 'Personal excelent'
           },
           {
             id: 3,
-            img: 'https://chicsalon.ro/wp-content/uploads/2017/03/Chic-Salon-Izvor-5.jpg',
-            txt: 'Preturi cam mari'
+            img: 'https://barber-deluxe.ro/wp-content/gallery/galerie/AIRME3946.JPG',
+            txt: 'Preturi ridicate dar servicii foarte bun'
           }
         ],
         categori_servicii: [
@@ -430,167 +433,102 @@ export default {
             servici: [
               {
                 id: 1,
-                title: 'Coafat scurt',
-                pret: '50'
+                title: 'Aplicare pudra indesire par',
+                pret: '15'
               },
               {
                 id: 2,
-                title: 'Coafat mediu',
-                pret: '60'
-              },
-              {
-                id: 3,
-                title: 'Coafat lung',
-                pret: '70'
-              },
-              {
-                id: 4,
-                title: 'Coafat ocazie',
-                pret: '160'
-              },
-              {
-                id: 5,
-                title: 'Impletit',
+                title: 'Tuns din foarfeca si masina,consiliere,styling40 Ron',
                 pret: '40'
               },
               {
-                id: 6,
-                title: 'Suvite mediu',
-                pret: '165'
-              },
-              {
-                id: 7,
-                title: 'ImpSuvite lungletit',
-                pret: '200'
+                id: 3,
+                title: 'Ras capilar',
+                pret: '45'
               }
             ]
           },
           {
             id: 2,
-            title: 'Manichiura si Pedichiura',
+            title: 'Tratament',
             servici: [
               {
                 id: 1,
-                title: 'Manichiura clasica',
+                title: 'Basic Tratament',
                 pret: '50'
               },
               {
                 id: 2,
-                title: 'Manichiura semi-permanenta',
-                pret: '95'
+                title: 'Medium Tratament',
+                pret: '80'
               },
               {
                 id: 3,
-                title: 'Manichiura semi-permanenta french',
-                pret: '105'
+                title: 'Long Tratament',
+                pret: '95'
               },
               {
                 id: 4,
-                title: 'Manichiura barbati',
-                pret: '45'
-              },
-              {
-                id: 5,
-                title: 'Pedichiura clasica',
-                pret: '75'
-              },
-              {
-                id: 6,
-                title: 'Pedichiura semi-permanenta',
+                title: 'Deluxe Tratament',
                 pret: '120'
-              },
-              {
-                id: 7,
-                title: 'Pedichiura semi-permanenta french',
-                pret: '130'
-              },
-              {
-                id: 8,
-                title: 'Pedichiura barbati',
-                pret: '55'
               }
             ]
           },
           {
             id: 3,
-            title: 'Machiaj',
+            title: 'Epilat',
             servici: [
               {
                 id: 1,
-                title: 'Machiaj de zi',
-                pret: '150'
+                title: 'Epilat ceara ceafa',
+                pret: '15'
               },
               {
                 id: 2,
-                title: 'Machiaj seara/ocazie',
-                pret: '250'
+                title: 'Epilat ceara gat',
+                pret: '15'
               },
               {
                 id: 3,
-                title: 'Machiaj mireasa',
-                pret: '350'
+                title: 'Epilt zona nazala su urechi',
+                pret: '15'
               },
               {
                 id: 4,
-                title: 'Machiaj editorial',
-                pret: '250'
+                title: 'Pensat traditional/ata',
+                pret: '20'
               }
             ]
           },
           {
             id: 4,
-            title: 'Cosmetica si Epilat',
+            title: 'Barbariet',
             servici: [
               {
                 id: 1,
-                title: 'Epilat scurt',
-                pret: '35'
+                title: 'Tuns barba si contur ata/brici ',
+                pret: '30'
               },
               {
                 id: 2,
-                title: 'Epilat lung femei',
+                title: 'Vopsit barba',
                 pret: '40'
               },
               {
                 id: 3,
-                title: 'Epilat lung barbati',
-                pret: '55'
-              },
-              {
-                id: 4,
-                title: 'Epilat barbati',
-                pret: '19'
-              },
-              {
-                id: 5,
-                title: 'Epilat mustata',
-                pret: '19'
-              },
-              {
-                id: 6,
-                title: 'Pensat',
-                pret: '25'
-              },
-              {
-                id: 7,
-                title: 'Pensat stilizare',
-                pret: '35'
-              },
-              {
-                id: 8,
-                title: 'Pensat barbati',
+                title: 'Barbierit traditional cu prosop la cald ,tratament pentru hidratarea tenului 35 Ron',
                 pret: '35'
               }
             ]
           },
           {
             id: 5,
-            title: 'Bronzare organica',
+            title: 'Eveniment',
             servici: [
               {
                 id: 1,
-                title: 'Bronzare organica cu DHA',
-                pret: '130'
+                title: 'Aranjat pentru eveniment - Spalat,styling',
+                pret: '20'
               }
             ]
           }
@@ -602,7 +540,10 @@ export default {
     reserve () {
       this.loading = true
       setTimeout(() => (this.loading = false), 2000)
-    }
+    },
+    allowedDates: val => parseInt(val.split('-')[2], 10) % 2 === 0,
+    allowedHours: v => v % 2,
+    allowedMinutes: v => v >= 10 && v <= 50
   }
 }
 </script>

@@ -60,7 +60,7 @@ export default {
         { title: 'Croitorii', route: '/page25croitorii', icon: 'mdi-help-box' },
         { title: 'Accesori', route: '/page3accesorii', icon: 'mdi-image' },
         { title: 'Saloane', route: '/page4saloane', icon: 'mdi-help-box' },
-        { title: 'Coafuri si Make-up', route: '/page5calendar', icon: 'mdi-help-box' }
+        { title: 'Coafuri si Machiaj', route: '/page5calendar', icon: 'mdi-help-box' }
       ]
     }
   }
