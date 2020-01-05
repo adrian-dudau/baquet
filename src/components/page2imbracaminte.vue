@@ -204,7 +204,7 @@ export default {
             description: 'Sacou slim fit cu aspect texturat Brasilia',
             link: 'https://www.fashiondays.ro/p/sacou-slim-fit-cu-aspect-texturat-brasilia-barbati-mango-p2431886-2/',
             price: '449,99 lei',
-            img: 'https://www.bigotti.ro/img/products/6/c/c/a/6/c/xVACMCR2DF0855140SM-1.jpg.pagespeed.ic.l-iQzYv7MW.webp'
+            img: 'https://fdcdn.akamaized.net/m/780x1132/products/27602/27601484/images/res_9bbd83b3a69263b8b4b0770af819ad8b.jpg?s=v6Bz2dTO5UbJ'
           },
           {
             id: 2,
