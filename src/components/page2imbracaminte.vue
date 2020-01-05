@@ -22,11 +22,10 @@
               :src="card.img"
               class="white--text align-end"
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-              height="200px"
+              height="700px"
             >
-              <v-card-title v-text="card.title"></v-card-title>
             </v-img>
-
+            <v-card-title v-text="card.title"></v-card-title>
             <v-card-text>
               {{card.description}}
             </v-card-text>
