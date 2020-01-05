@@ -3,13 +3,6 @@
     <div class="container">
         <h1>Sugestii Croitorii</h1>
 
-        <nav>
-            <ul>
-                <router-link class="previous" to="/page2imbracaminte">&lt; Imbracaminte</router-link>
-                <router-link class="next" to="/page3accesorii">Accesorii &raquo;</router-link>
-            </ul>
-        </nav>
-
         <div class="row">
 
             <div class="column">

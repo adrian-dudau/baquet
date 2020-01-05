@@ -13,11 +13,16 @@ import { firestorePlugin } from 'vuefire'
 import firebase from 'firebase/app'
 import 'firebase/firestore'
 
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+
 Vue.config.productionTip = false
 // register BootstrapVue
 Vue.use(BootstrapVue)
 // enable Vue Fire
 Vue.use(firestorePlugin)
+
+Vue.use(Vuetify)
 
 firebase.initializeApp({
   apiKey: '...',
@@ -36,5 +41,6 @@ new Vue({
   el: '#app',
   router,
   components: { App },
+  vuetify: new Vuetify(),
   template: '<App/>'
 })

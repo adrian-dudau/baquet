@@ -29,13 +29,8 @@
 <template>
 
   <div class="container">
-    <h1>Bun venit in banquet</h1>
-
-    <nav>
-        <ul>
-            <router-link class="next" to="/page2imbracaminte">Incepe &raquo;</router-link>
-        </ul>
-    </nav>
+    <h1>Home </h1>
+    <img src="../../resources/page_1/bkg_1.png" width="500">
   </div>
 
 </template>

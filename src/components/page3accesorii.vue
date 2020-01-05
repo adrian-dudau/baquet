@@ -3,13 +3,6 @@
   <div class="container">
     <h1>Accesorii Adecvate</h1>
 
-    <nav>
-      <ul>
-        <router-link class="previous" to="/page25croitorii">&lt; Croitorii</router-link>
-        <router-link class="next" to="/page4saloane">Saloane &gt;</router-link>
-      </ul>
-    </nav>
-
     <div class="row">
 
       <div class="column">

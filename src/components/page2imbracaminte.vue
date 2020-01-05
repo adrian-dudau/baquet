@@ -45,13 +45,6 @@
   <div class="container">
     <h1>Sugestii Imbracaminte</h1>
 
-    <nav>
-      <ul>
-        <router-link class="previous" to="/">&laquo; Acasa</router-link>
-        <router-link class="next" to="/page25croitorii">Croitorii &raquo;</router-link>
-      </ul>
-    </nav>
-
     <div class="row">
 
       <div class="column">
