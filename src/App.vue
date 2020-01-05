@@ -56,11 +56,11 @@ export default {
       drawer: true,
       items: [
         { title: 'Home', route: '/', icon: 'mdi-view-dashboard' },
-        { title: 'Imbracaminte', route: '/page2imbracaminte', icon: 'mdi-image' },
-        { title: 'Croitorii', route: '/page25croitorii', icon: 'mdi-help-box' },
-        { title: 'Accesori', route: '/page3accesorii', icon: 'mdi-image' },
-        { title: 'Saloane', route: '/page4saloane', icon: 'mdi-help-box' },
-        { title: 'Coafuri si Machiaj', route: '/page5calendar', icon: 'mdi-help-box' }
+        { title: 'Imbracaminte', route: '/page2imbracaminte', icon: 'mdi-hanger' },
+        { title: 'Croitorii', route: '/page25croitorii', icon: 'mdi-google-street-view' },
+        { title: 'Accesori', route: '/page3accesorii', icon: 'mdi-hat-fedora' },
+        { title: 'Saloane', route: '/page4saloane', icon: 'mdi-home-group' },
+        { title: 'Coafuri si Machiaj', route: '/page5calendar', icon: 'mdi-content-cut' }
       ]
     }
   }
