@@ -194,8 +194,68 @@ export default {
         ]
       },
       {
-        id: 3,
+        id: 4,
         title: 'Costume Barbatesti',
+        cards: [
+          {
+            id: 1,
+            clicked: true,
+            title: 'Mango',
+            description: 'Sacou slim fit cu aspect texturat Brasilia',
+            link: 'https://www.fashiondays.ro/p/sacou-slim-fit-cu-aspect-texturat-brasilia-barbati-mango-p2431886-2/',
+            price: '449,99 lei',
+            img: 'https://fdcdn.akamaized.net/m/780x1132/products/27602/27601484/images/res_9bbd83b3a69263b8b4b0770af819ad8b.jpg?s=v6Bz2dTO5UbJ'
+          },
+          {
+            id: 2,
+            title: 'Sacou Tip Smoching',
+            clicked: true,
+            description: 'Sacou cu guler și rever lat din țesătură combinată de culoare asortată. Mânecă lungă cu nasturi la manșetă.',
+            link: 'https://www.zara.com/ro/ro/sacou-tip-smoching-p01564360.html',
+            price: '399,90 lei',
+            img: 'https://static.zara.net/photos///2019/I/0/2/p/1564/360/800/6/w/1924/1564360800_1_1_1.jpg?ts=1575361919201'
+          },
+          {
+            id: 3,
+            clicked: false,
+            title: 'Costum Barbati SlimFit Albastru cu Dungi Maro',
+            description: 'Costum slim fit, cu doi nasturi. Potrivit pentru ceremonii, întâlniri de afaceri, și evenimente.',
+            link: 'https://www.monarchformen.ro/product/costum-print/',
+            price: '1200 lei',
+            img: 'https://i2.wp.com/www.monarchformen.ro/wp-content/uploads/2018/03/4.2.png'
+          },
+          {
+            id: 4,
+            clicked: true,
+            title: 'Costum SlimFit Visiniu',
+            description: 'Costum Visiniu SlimFit din lana in doua bucati.',
+            link: 'https://www.monarchformen.ro/product/costum-barbati-slim-fit-visiniu-lana-2/',
+            price: '1200 lei',
+            img: 'https://i1.wp.com/www.monarchformen.ro/wp-content/uploads/2019/07/zaa1563.jpg'
+          },
+          {
+            id: 5,
+            clicked: false,
+            title: 'Costum barbati tip Zara',
+            description: 'Costum barbati office - costum fashion - costum elegant - costum nunta - costum botez - Costum Slim fit',
+            link: 'https://dehaine.ro/costum-barbati-zara-online-cu-vesta-a1726',
+            price: '299 lei',
+            img: 'https://dehaine.ro/image/cache/catalog/-9913/638/costum-tip-zara-A1726-380x475.JPG'
+          },
+          {
+            id: 6,
+            clicked: true,
+            title: 'Costum Bigotti',
+            description: 'Costum Slim Mondrian negru Uni.',
+            link: 'https://www.bigotti.ro/costume-barbati/costum-slim-mondrian-negru-uni-VACSCR3X710W19991',
+            price: '1990 lei',
+            img: 'https://www.bigotti.ro/img/products/c/b/2/0/1/e/xVACSCR3X710W1999148-3.jpg.pagespeed.ic.BXl91Cdnux.webp'
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: 'Camasi Barbatesti',
         cards: [
           {
             id: 1,
